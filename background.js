@@ -40,18 +40,36 @@ const images = [
     "40.jpg",
 ];
 
-const chosenImage = images[Math.floor(Math.random() * images.length)];
+// const chosenImage = images[Math.floor(Math.random() * images.length)];
 
-console.log(chosenImage);
+// console.log(chosenImage);
 
 //javascript에서 이미지 객체를 만들고 chosenImage라고 source를 지정해줌
-const bgImage = document.createElement("img");
-bgImage.src = `img/${chosenImage}`
+// const bgImage = document.createElement("img");
 
-console.log(bgImage);
+// console.log(bgImage);
 
 //document의 body안에 넣어줌
-document.body.appendChild(bgImage);
+
+
+for(i=0;i<images.length;i++){
+
+    let chosenImage = images[i];
+    //a 태그 만들고 href 설정
+    const bgImageLink = document.createElement("a");
+    bgImageLink.href= "http://www.naver.com";
+    bgImageLink.setAttribute('class','content');
+
+    //img 태그 만들고 src 설정
+    const bgImage = document.createElement("img");
+    bgImage.src = `img/${chosenImage}`;
+
+    //a 태그 rollingWrap에 넣고 img 태그 a에 넣음
+    document.body.querySelector(".rollingWrap").appendChild(bgImageLink);
+    bgImageLink.appendChild(bgImage);
+
+
+}
 
 
 
