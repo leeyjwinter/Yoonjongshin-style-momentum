@@ -3,6 +3,7 @@ var img_cnt = 0;
 var first=1;
 var last;
 var interval;
+let MoveOn = false;
 
 $(document).ready(function() {
 	$(".rollingWrap a").each(function() {
@@ -14,12 +15,18 @@ $(document).ready(function() {
 	last = img_cnt;
 	startAction();
 
-	$(".content").hover(
-		function() { stopAction(); }, 
-		function() { startAction(); });
+	// $(".content").hover(
+	// 	function() { stopAction(); }, 
+	// 	function() { startAction(); });
 });
 
 function startAction() {
+	console.log(MoveOn);
+	if(MoveOn === true){
+		// console.log(MoveOn);
+		return;
+	}
+	else{
 	interval = setInterval(function() {
 		$(".rollingWrap a").each(function() {
 			$(this).css("left", $(this).position().left-1);
@@ -36,9 +43,13 @@ function startAction() {
 			if(first > img_cnt) {first = 1;}
 		}
 	}, 15);
+	MoveOn = true;
+	}
+
 }
 
 function stopAction() {
+	MoveOn = false;
 	clearInterval(interval);
 }
 

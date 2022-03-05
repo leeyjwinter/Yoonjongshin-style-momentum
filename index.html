@@ -6,7 +6,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width ,initial-scale=1.0">
         <title>Yoon Lover</title>
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&amp;subset=korean" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="jquery-3.1.0.min.js"></script>
         
         
     </head>
@@ -16,7 +18,13 @@
         <div class="rollingWrap">
         </div>  
 
-        <script src="rolling.js"></script>
+
+        <div class="buttons_wrap">
+            <a href="javascript:void(0);" onclick="stopAction()" class="button">MOVE STOP</a>
+            <a href="javascript:void(0);" onclick="startAction()" class="button">MOVE START</a>
+        </div>
+
+        <script type="text/javascript" src="rolling.js"></script>
         <script src="background.js"></script>
 
     </body>

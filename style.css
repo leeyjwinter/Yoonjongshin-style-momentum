@@ -1,22 +1,36 @@
 
 
 html, body{
+	font-family: "Nanum Gothic";
 	background-color: black;
 	width:100%;
 	min-height: 100%;
 	height: 100%;
 }
 
+a:-webkit-any-link {
+	color: white;
+	font-weight: bold;
+	font-size: larger;
+  }
+
 h1{
-	color: aliceblue;
-	width: 60%;
+	
+	color: white;
+	width: 80%;
 	margin:auto;
 	margin-top:10px;
 }
 
+.buttons_wrap {
+	width: 80%;
+	margin: auto;
+	margin-top: 10px;
+}
+
 .rollingWrap{
 	position:relative;
-	width: 60%;
+	width: 80%;
 	min-height: 200px;
 	height: 200px;
 
