@@ -8,7 +8,7 @@ const loginForm = document.querySelector("#login-form");
 //loginForm id를 가진 태그의 요소들을 가져옴
 const loginInput = loginForm.querySelector("input");
 const loginButton = loginForm.querySelector("button");
-const greetings = document.querySelector("h1");
+const greetings = document.querySelector("h2");
 const HIDDEN_CLASSNAME = "hidden";
 
 //const loginInput = document.querySelector("#login-form input");
@@ -53,7 +53,7 @@ function onLoginSubmitEvent(event){
 }
 
 function paintGreetings(username){
-    greetings.innerText = `Hello ${username}`;
+    greetings.innerText = `${username}, thank you for loving Yoon`;
 	greetings.classList.remove(HIDDEN_CLASSNAME);
 }
 

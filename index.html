@@ -15,6 +15,7 @@
 
     <body>
         <h1> Yoon's Playlist </h1>
+        <h2 id="greetings" class="hidden"></h2>
         <div class="rollingWrap">
         </div>  
 
@@ -24,8 +25,16 @@
             <a href="javascript:void(0);" onclick="startAction()" class="button">MOVE START</a>
         </div>
 
+        <center>
+        <form id="login-form">
+            <input required maxlength="15"type="text" placeholder="What is your name?" />
+            <input type="submit" value="Enter&crarr;"/>
+            </form>
+        </center>
+
         <script type="text/javascript" src="rolling.js"></script>
         <script src="background.js"></script>
+        <script src="greetings.js"></script>
 
     </body>
 </html>
@@ -61,7 +70,7 @@
     <span>author</span>
     </div>
 
-<script src="greetings.js"></script>
+
 <script src="clock.js"></script>
 <script src="quotes.js"></script>
 <script src="background.js"></script>
