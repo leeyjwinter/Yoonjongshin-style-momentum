@@ -2,7 +2,7 @@
 //preventDefault함수로 JS의 기본기능을 잠그면서 실행하기
 
 
-
+const allHtml = document.querySelector("body");
 const loginForm = document.querySelector("#login-form");
 
 //loginForm id를 가진 태그의 요소들을 가져옴
@@ -63,9 +63,11 @@ loginForm.addEventListener("submit",onLoginSubmitEvent);
 const savedUsername = localStorage.getItem("username");
 // localStorage.removeItem("username");
 if(savedUsername!=null){
+    
 	loginForm.classList.add(HIDDEN_CLASSNAME);
     paintGreetings(savedUsername);
 }
 else{
+    // allHtml.classList.add(HIDDEN_CLASSNAME);
     loginForm.classList.remove(HIDDEN_CLASSNAME);
 }

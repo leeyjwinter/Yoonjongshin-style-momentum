@@ -83,10 +83,6 @@ function paintLocal(item){//paintLocal의 각각의 item들에 대해 사용한�
     toDoList.appendChild(li);
 }
 
-
-
-
-
 //localStorage 요소 지우기
 
 
