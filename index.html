@@ -16,11 +16,12 @@
     <body>
         <h1> Yoon's Playlist </h1>
         <h2 id="greetings" class="hidden"></h2>
+        <h3 id="clock">00:00</h3> is a great time to listen to Yoon
         <div class="rollingWrap">
         </div>  
 
 
-        <div class="buttons_wrap">
+        <div class="buttonsWrap">
             <a href="javascript:void(0);" onclick="stopAction()" class="button">MOVE STOP</a>
             <a href="javascript:void(0);" onclick="startAction()" class="button">MOVE START</a>
         </div>
@@ -34,9 +35,9 @@
 
         <section>
             <article id="todoInput">
-            <div>My ToDos</div>    
+            <div class = "todoTitle">My ToDos</div>    
             <form id = "todo-form">
-            <input type = "text" placeholder="Write a To Do and Press Enter" required/>
+            <input type = "text" placeholder="What is Your Main Focus Today?" required/>
             </form>
 
             <ul id="todo-list">
@@ -61,6 +62,7 @@
         <script src="background.js"></script>
         <script src="greetings.js"></script>
         <script src="todo.js"></script>
+        <script src="clock.js"></script>
 
     </body>
 </html>
@@ -97,7 +99,7 @@
     </div>
 
 
-<script src="clock.js"></script>
+
 <script src="quotes.js"></script>
 <script src="background.js"></script>
 

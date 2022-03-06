@@ -5,12 +5,11 @@ let toDos = [];
 const TODOS_KEY = "todos"
 
 function deleteTodo(event){
-    clickedList = event.target.parentElement.innerText;
     const li = event.target.parentElement;
+    li.remove();
     //toDos 리스트를 업데이트 해줌(방금 클릭된 아이디 제외한 것만 남겨두는 필터함수)
     toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
     saveToDos(toDos);
-    li.remove();
 }
 
 function paintToDo(object){
@@ -18,13 +17,14 @@ function paintToDo(object){
     //li를 만들고 그 안에 span넣고 싶음
     const li = document.createElement("li");
     li.id = object.id;
+    const button = document.createElement("div");
+    button.classList.add("checkbox");
+    button.innerText = "❌";
     const span = document.createElement("span");
     span.innerText = object.text;
-    const button = document.createElement("button");
-    button.innerText = "❌";
     button.addEventListener("click", deleteTodo);
-    li.appendChild(span);
     li.appendChild(button);
+    li.appendChild(span);
     toDoList.appendChild(li);
 
     // localStorage.setItem(`myTodo${listCount}`,myTodo);
@@ -73,14 +73,17 @@ if(savedToDos){
 
 function paintLocal(item){//paintLocal의 각각의 item들에 대해 사용한다는 의미의 매개변수
     const li = document.createElement("li");
+    li.id=item.id;
     const span = document.createElement("span");
     span.innerText = item.text;
-    const button = document.createElement("button");
+    const button = document.createElement("div");
+    button.classList.add("checkbox");
     button.innerText = "❌";
     button.addEventListener("click", deleteTodo);
-    li.appendChild(span);
     li.appendChild(button);
+    li.appendChild(span);
     toDoList.appendChild(li);
+
 }
 
 //localStorage 요소 지우기
