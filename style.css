@@ -131,15 +131,10 @@ h3{
 }
 
 
-#todo-list{
-	display: flex;
-    flex-direction: column;
-	width:80%;
-	margin:auto;
-}
+
 
 section{
-	height: 40%;
+	min-height: 40%;
 	display: flex;
 	justify-content: space-between;
 }
@@ -151,6 +146,7 @@ section > *{
 	width:49%;
 	box-sizing: border-box;
 	display: inline-block;
+	overflow: auto;
 }
 
 #todoInput .todoTitle{
@@ -165,18 +161,38 @@ section > *{
     justify-content: center;
 }
 
+#todo-list{
+	list-style: none;
+	padding-left: 0px;
+	display: flex;
+    flex-direction: column;
+	width:80%;
+	margin:auto;
+	height:80%
+}
+
+#todo-list li{
+	margin-top: 1%;
+}
+
+.checkbox:hover{
+	color:lightgreen;
+}
+
 .checkbox {
+	opacity: 0.7;
 	display: inline-block;
 	width: 20px;
 	height: 20px;
 	margin-right: 10px;
 	background-color: transparent;
-	border: 2px solid black;
-	border-radius: 50%;
+	border: 2px solid white;
+	border-radius: 20%;
 	cursor: pointer;
 	transition: all 0.2s ease-in-out;
-	justify-content: center;
-	align-items: center;
+	text-align: center;
+	/* justify-content: center;
+	align-items: center; */
 	font-size: 13px;
-	color: rgb(0, 180, 120);
+	color: white;
   }
