@@ -1,70 +1,68 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width ,initial-scale=1.0">
-        <title>Yoon Lover</title>
-        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&amp;subset=korean" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-        
-        
-        
-    </head>
 
-    <body>
-        <h1> Yoon's Playlist </h1>
-        <h2 id="greetings" class="hidden"></h2>
-        <h3 id="clock">00:00</h3> is a great time to listen to Yoon
-        <div class="rollingWrap">
-        </div>  
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width ,initial-scale=1.0">
+    <title>Yoon Lover</title>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&amp;subset=korean" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
 
-        <div class="buttonsWrap">
-            <a href="javascript:void(0);" onclick="stopAction()" class="button">MOVE STOP</a>
-            <a href="javascript:void(0);" onclick="startAction()" class="button">MOVE START</a>
-        </div>
 
-        <center>
+</head>
+
+<body>
+    <h1> Yoon's Playlist </h1>
+    <h2 id="greetings" class="hidden"></h2>
+    <h3 id="clock">00:00</h3> is a great time to listen to Yoon
+    <div class="rollingWrap">
+    </div>
+
+
+    <div class="buttonsWrap">
+        <a href="javascript:void(0);" onclick="stopAction()" class="button">MOVE STOP</a>
+        <a href="javascript:void(0);" onclick="startAction()" class="button">MOVE START</a>
+    </div>
+
+    <center>
         <form id="login-form">
-            <input required maxlength="15"type="text" placeholder="What is your name?" />
-            <input type="submit" value="Enter&crarr;"/>
-            </form>
-        </center>
+            <input required maxlength="15" type="text" placeholder="What is your name?" />
+            <input type="submit" value="Enter&crarr;" />
+        </form>
+    </center>
 
-        <section>
-            <article id="todoInput">
-            <div class = "todoTitle">My ToDos</div>    
-            <form id = "todo-form">
-            <input type = "text" placeholder="What is Your Main Focus Today?" required/>
+    <section>
+        <article id="todoInput">
+            <div class="todoTitle">My ToDos</div>
+            <form id="todo-form">
+                <input type="text" placeholder="What is Your Main Focus Today?" required />
             </form>
 
             <ul id="todo-list">
             </ul>
-        </article>  
-        
-        <article id = "todoDone">     
-            <form id = "todo-formDone">
-            <input type = "text" placeholder="Write a To Do and Press Enter" required/>
-            </form>
-
-            <ul id="todo-listDone">
-            </ul>
         </article>
 
-        </section>
+        <article id="YoonMV">
+
+        </article>
+
+    </section>
 
 
 
-        <script type="text/javascript" src="jquery-3.1.0.min.js"></script>
-        <script type="text/javascript" src="rolling.js"></script>
-        <script src="background.js"></script>
-        <script src="greetings.js"></script>
-        <script src="todo.js"></script>
-        <script src="clock.js"></script>
+    <script type="text/javascript" src="jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="rolling.js"></script>
+    <script src="background.js"></script>
+    <script src="greetings.js"></script>
+    <script src="todo.js"></script>
+    <script src="clock.js"></script>
+    <script src="YoonMV.js"></script>
 
-    </body>
+</body>
+
 </html>
 
 

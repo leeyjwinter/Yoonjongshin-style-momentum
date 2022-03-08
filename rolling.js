@@ -15,13 +15,13 @@ $(document).ready(function() {
 	last = img_cnt;
 	startAction();
 
-	// $(".content").hover(
-	// 	function() { stopAction(); }, 
-	// 	function() { startAction(); });
+	$(".content").hover(
+		function() { stopAction(); }, 
+		function() { startAction(); });
 });
 
 function startAction() {
-	console.log(MoveOn);
+	// console.log(MoveOn);
 	if(MoveOn === true){
 		// console.log(MoveOn);
 		return;
