@@ -6,7 +6,7 @@ var interval;
 let MoveOn = false;
 
 $(document).ready(function() {
-	$(".rollingWrap a").each(function() {
+	$(".rollingWrap div").each(function() {
 		$(this).css("left", banner_left);
 		banner_left += $(this).width()+5;
 		$(this).attr("id", "content"+(++img_cnt));
@@ -15,9 +15,9 @@ $(document).ready(function() {
 	last = img_cnt;
 	startAction();
 
-	$(".content").hover(
-		function() { stopAction(); }, 
-		function() { startAction(); });
+	// $(".content").hover(
+	// 	function() { stopAction(); }, 
+	// 	function() { startAction(); });
 });
 
 function startAction() {
@@ -28,7 +28,7 @@ function startAction() {
 	}
 	else{
 	interval = setInterval(function() {
-		$(".rollingWrap a").each(function() {
+		$(".rollingWrap div").each(function() {
 			$(this).css("left", $(this).position().left-1);
 		});
 
