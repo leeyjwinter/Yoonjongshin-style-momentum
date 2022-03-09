@@ -1,0 +1,33 @@
+.buttonsWrap {
+	font-size: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.rollingWrap{
+	position:relative;
+	min-height: 250px;
+	height: 250px;
+
+	margin: auto;
+	margin-top:10px;
+	overflow: hidden;
+}
+
+.rollingWrap div{
+	display: inline-block;
+	position: absolute;
+	width:250px;
+	height: 100%;
+	margin-left: 5px;
+	margin-right: 5px;
+	overflow: hidden;
+	border:transparent;
+	background-color: black;
+}
+
+.rollingWrap div img{
+	width: 100%;
+	height: 100%;
+	border-radius: 20%;
+}

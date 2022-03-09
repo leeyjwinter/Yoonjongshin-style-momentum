@@ -52,7 +52,6 @@ function onLoginSubmitEvent(event){
     buttonsWrap.classList.remove(HIDDEN_CLASSNAME);
     rollingWrap.classList.remove(HIDDEN_CLASSNAME);
 	const username = loginInput.value; 
-    console.log(loginInput.value);	
 	loginForm.classList.add("hidden");
 //	greetings.innerText = "Hello " + username;
     paintGreetings(username);
