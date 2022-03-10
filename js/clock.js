@@ -6,18 +6,6 @@ function sayHello(){
     console.log("hello");
 }
 
-
-
-//4000밀리초마다 호출
-//setInterval(sayHello,4000);
-
-
-//4초 뒤에 timeout시키며 호출
-// setTimeout(sayHello,4000);
-
-
-
-
 function showTime(){
     const date = new Date();
     hour = String(date.getHours());

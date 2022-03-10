@@ -18,8 +18,6 @@ function lineThroughTodo(event){
     const li = event.target.parentElement;
     const selectedId = li.id;
     const selectedIdElement = document.getElementById(selectedId);
-    // console.log((window.getComputedStyle(selectedIdElement).textDecoration));
-    // li.style.setProperty('text-decoration','line-through');
     if((window.getComputedStyle(selectedIdElement).textDecoration)!="line-through solid rgb(255, 255, 255)"){
         li.style.setProperty('text-decoration','line-through');
     }
@@ -50,8 +48,6 @@ function paintToDo(object){
     li.appendChild(span);
     toDoList.appendChild(li);
 
-    // localStorage.setItem(`myTodo${listCount}`,myTodo);
-    // listCount++;
 }
 
 
@@ -77,8 +73,6 @@ function onTodoSubmitEvent(event){
     toDoInput.value = ""
     paintToDo(myTodoObj);
 
-    // newTodo =  localStorage.getItem("myTodo");
-    // toDoList.innerText = newTodo;
 }
 
 toDoForm.addEventListener("submit",onTodoSubmitEvent);
@@ -117,8 +111,6 @@ function paintLocal(item){//paintLocal의 각각의 item들에 대해 사용한�
 }
 
 //localStorage 요소 지우기
-
-
 //[1,2,3,4].filter(sexyFilter) 은
 //배열 요소마다 sexyFilter을 실행하고 sexyFilter(1) true가 아니면 없앰
 

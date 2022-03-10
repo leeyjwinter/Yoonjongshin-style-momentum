@@ -21,9 +21,9 @@ $(document).ready(function() {
 });
 
 function startAction() {
-	// console.log(MoveOn);
+
 	if(MoveOn === true){
-		// console.log(MoveOn);
+
 		return;
 	}
 	else{

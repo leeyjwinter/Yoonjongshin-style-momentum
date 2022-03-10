@@ -105,7 +105,6 @@ const MVArea = document.getElementById("YoonMV");
 
 function paintMV(event){
     const buttonClicked = event.target.parentElement;
-    // console.log(buttonClicked.id.slice(-1));
     const buttonNum = buttonClicked.id.slice(-(buttonClicked.id.length-7));
     MVArea.innerHTML=MVLink[buttonNum-1].source;
 }
@@ -114,9 +113,8 @@ function paintMV(event){
 for(i=0;i<images.length;i++){
 
     let chosenImage = images[i];
-    //a 태그 만들고 href 설정
+    //button 태그 만들고 eventlistener 설정
     const bgImageLink = document.createElement("div");
-    // bgImageLink.href= "http://www.naver.com";
     bgImageLink.setAttribute('class','content');
     bgImageLink.addEventListener("click",paintMV);
 
@@ -124,16 +122,10 @@ for(i=0;i<images.length;i++){
     const bgImage = document.createElement("img");
     bgImage.src = `img/${chosenImage}`;
 
-    //a 태그 rollingWrap에 넣고 img 태그 a에 넣음
+    //button 태그 rollingWrap에 넣고 img 태그 button에 넣음
     document.body.querySelector(".rollingWrap").appendChild(bgImageLink);
     bgImageLink.appendChild(bgImage);
 }
-
-// for(i=1;i<images.length;i++){
-//     const chosenButton = document.getElementById(`content${i}`);
-//     console.log(chosenButton);
-//     chosenButton.addEventListener("click",paintMV);
-// }
 
 
 
